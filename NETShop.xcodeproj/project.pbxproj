@@ -3,19 +3,54 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		38DFF60B544D75A6B4798759 /* Pods_NETShop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 644BA2AF792EF3E8FEC6D1E2 /* Pods_NETShop.framework */; };
+		9913BC2F2328FEBF00E91A2A /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9913BC2E2328FEBF00E91A2A /* CartViewController.swift */; };
+		9916D0C523167F78006D2CB0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9916D0C423167F78006D2CB0 /* HomeViewController.swift */; };
+		9916D0C723167FE2006D2CB0 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9916D0C623167FE2006D2CB0 /* CategoryViewController.swift */; };
+		9916D0C923168018006D2CB0 /* SubCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9916D0C823168018006D2CB0 /* SubCategoryViewController.swift */; };
+		9916D0CB2316806F006D2CB0 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9916D0CA2316806F006D2CB0 /* ProductViewController.swift */; };
+		9916D0CD2316A637006D2CB0 /* CategoryListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9916D0CC2316A637006D2CB0 /* CategoryListTableViewCell.swift */; };
+		9916D0CF2317DC6E006D2CB0 /* SubCategoryListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9916D0CE2317DC6E006D2CB0 /* SubCategoryListTableViewCell.swift */; };
+		991B3735232A647F0076C16F /* CartListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991B3734232A647F0076C16F /* CartListTableViewCell.swift */; };
+		991FD5BA2322805800A57D98 /* ProductListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991FD5B92322805800A57D98 /* ProductListTableViewCell.swift */; };
+		991FD5BC2322826900A57D98 /* ProductDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991FD5BB2322826900A57D98 /* ProductDetailsViewController.swift */; };
+		992E6FC22313ED3E00A1FA9B /* SingUPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992E6FC12313ED3E00A1FA9B /* SingUPViewController.swift */; };
+		992E6FC42313F5E600A1FA9B /* giphy .gif in Resources */ = {isa = PBXBuildFile; fileRef = 992E6FC32313F5E600A1FA9B /* giphy .gif */; };
+		992E6FC62313FECC00A1FA9B /* ChangePassWordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992E6FC52313FECC00A1FA9B /* ChangePassWordViewController.swift */; };
+		992E6FC82313FF4B00A1FA9B /* ForgotPassWordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992E6FC72313FF4B00A1FA9B /* ForgotPassWordViewController.swift */; };
 		992F8CE42313D30A008C9684 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992F8CE32313D30A008C9684 /* AppDelegate.swift */; };
 		992F8CE62313D30A008C9684 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992F8CE52313D30A008C9684 /* ViewController.swift */; };
 		992F8CE92313D30A008C9684 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 992F8CE72313D30A008C9684 /* Main.storyboard */; };
 		992F8CEC2313D30A008C9684 /* NETShop.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 992F8CEA2313D30A008C9684 /* NETShop.xcdatamodeld */; };
 		992F8CEE2313D30C008C9684 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 992F8CED2313D30C008C9684 /* Assets.xcassets */; };
 		992F8CF12313D30C008C9684 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 992F8CEF2313D30C008C9684 /* LaunchScreen.storyboard */; };
+		993034632323D1FD00D4649B /* lock1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 993034622323D1FD00D4649B /* lock1.jpg */; };
+		993034652323D3AE00D4649B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993034642323D3AE00D4649B /* ProfileViewController.swift */; };
+		993034672323D90400D4649B /* lock2.png in Resources */ = {isa = PBXBuildFile; fileRef = 993034662323D90300D4649B /* lock2.png */; };
+		99E1DF9723154CE70083EAA4 /* TrtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E1DF9623154CE70083EAA4 /* TrtViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4570BF7F8BAE6B857A1BB951 /* Pods-NETShop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NETShop.release.xcconfig"; path = "Target Support Files/Pods-NETShop/Pods-NETShop.release.xcconfig"; sourceTree = "<group>"; };
+		644BA2AF792EF3E8FEC6D1E2 /* Pods_NETShop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NETShop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9913BC2E2328FEBF00E91A2A /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		9916D0C423167F78006D2CB0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		9916D0C623167FE2006D2CB0 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		9916D0C823168018006D2CB0 /* SubCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubCategoryViewController.swift; sourceTree = "<group>"; };
+		9916D0CA2316806F006D2CB0 /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
+		9916D0CC2316A637006D2CB0 /* CategoryListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListTableViewCell.swift; sourceTree = "<group>"; };
+		9916D0CE2317DC6E006D2CB0 /* SubCategoryListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubCategoryListTableViewCell.swift; sourceTree = "<group>"; };
+		991B3734232A647F0076C16F /* CartListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartListTableViewCell.swift; sourceTree = "<group>"; };
+		991FD5B92322805800A57D98 /* ProductListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListTableViewCell.swift; sourceTree = "<group>"; };
+		991FD5BB2322826900A57D98 /* ProductDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewController.swift; sourceTree = "<group>"; };
+		992E6FC12313ED3E00A1FA9B /* SingUPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingUPViewController.swift; sourceTree = "<group>"; };
+		992E6FC32313F5E600A1FA9B /* giphy .gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "giphy .gif"; sourceTree = "<group>"; };
+		992E6FC52313FECC00A1FA9B /* ChangePassWordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePassWordViewController.swift; sourceTree = "<group>"; };
+		992E6FC72313FF4B00A1FA9B /* ForgotPassWordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassWordViewController.swift; sourceTree = "<group>"; };
 		992F8CE02313D30A008C9684 /* NETShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NETShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		992F8CE32313D30A008C9684 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		992F8CE52313D30A008C9684 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +59,11 @@
 		992F8CED2313D30C008C9684 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		992F8CF02313D30C008C9684 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		992F8CF22313D30C008C9684 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		993034622323D1FD00D4649B /* lock1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lock1.jpg; sourceTree = "<group>"; };
+		993034642323D3AE00D4649B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		993034662323D90300D4649B /* lock2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lock2.png; sourceTree = "<group>"; };
+		99E1DF9623154CE70083EAA4 /* TrtViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrtViewController.swift; sourceTree = "<group>"; };
+		AA247A34E7D6908585A5CAA8 /* Pods-NETShop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NETShop.debug.xcconfig"; path = "Target Support Files/Pods-NETShop/Pods-NETShop.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +71,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38DFF60B544D75A6B4798759 /* Pods_NETShop.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8EB66B1AC865DBB267425479 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AA247A34E7D6908585A5CAA8 /* Pods-NETShop.debug.xcconfig */,
+				4570BF7F8BAE6B857A1BB951 /* Pods-NETShop.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		992F8CD72313D30A008C9684 = {
 			isa = PBXGroup;
 			children = (
 				992F8CE22313D30A008C9684 /* NETShop */,
 				992F8CE12313D30A008C9684 /* Products */,
+				8EB66B1AC865DBB267425479 /* Pods */,
+				B4C4FC44D77CFC2F1AAE6C7E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,12 +111,38 @@
 				992F8CE32313D30A008C9684 /* AppDelegate.swift */,
 				992F8CE52313D30A008C9684 /* ViewController.swift */,
 				992F8CE72313D30A008C9684 /* Main.storyboard */,
+				99E1DF9623154CE70083EAA4 /* TrtViewController.swift */,
+				992E6FC12313ED3E00A1FA9B /* SingUPViewController.swift */,
+				992E6FC52313FECC00A1FA9B /* ChangePassWordViewController.swift */,
+				992E6FC72313FF4B00A1FA9B /* ForgotPassWordViewController.swift */,
+				9916D0C423167F78006D2CB0 /* HomeViewController.swift */,
+				9916D0C623167FE2006D2CB0 /* CategoryViewController.swift */,
+				9916D0C823168018006D2CB0 /* SubCategoryViewController.swift */,
+				9916D0CA2316806F006D2CB0 /* ProductViewController.swift */,
+				9916D0CC2316A637006D2CB0 /* CategoryListTableViewCell.swift */,
+				9916D0CE2317DC6E006D2CB0 /* SubCategoryListTableViewCell.swift */,
+				991FD5B92322805800A57D98 /* ProductListTableViewCell.swift */,
+				991FD5BB2322826900A57D98 /* ProductDetailsViewController.swift */,
+				9913BC2E2328FEBF00E91A2A /* CartViewController.swift */,
+				991B3734232A647F0076C16F /* CartListTableViewCell.swift */,
+				993034642323D3AE00D4649B /* ProfileViewController.swift */,
 				992F8CED2313D30C008C9684 /* Assets.xcassets */,
+				992E6FC32313F5E600A1FA9B /* giphy .gif */,
+				993034622323D1FD00D4649B /* lock1.jpg */,
+				993034662323D90300D4649B /* lock2.png */,
 				992F8CEF2313D30C008C9684 /* LaunchScreen.storyboard */,
 				992F8CF22313D30C008C9684 /* Info.plist */,
 				992F8CEA2313D30A008C9684 /* NETShop.xcdatamodeld */,
 			);
 			path = NETShop;
+			sourceTree = "<group>";
+		};
+		B4C4FC44D77CFC2F1AAE6C7E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				644BA2AF792EF3E8FEC6D1E2 /* Pods_NETShop.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +152,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 992F8CF52313D30C008C9684 /* Build configuration list for PBXNativeTarget "NETShop" */;
 			buildPhases = (
+				ED00A49566A5848CCFDB322F /* [CP] Check Pods Manifest.lock */,
 				992F8CDC2313D30A008C9684 /* Sources */,
 				992F8CDD2313D30A008C9684 /* Frameworks */,
 				992F8CDE2313D30A008C9684 /* Resources */,
+				F6188EC5A7A285D7F05F9C59 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,12 +206,57 @@
 			buildActionMask = 2147483647;
 			files = (
 				992F8CF12313D30C008C9684 /* LaunchScreen.storyboard in Resources */,
+				993034672323D90400D4649B /* lock2.png in Resources */,
 				992F8CEE2313D30C008C9684 /* Assets.xcassets in Resources */,
+				993034632323D1FD00D4649B /* lock1.jpg in Resources */,
 				992F8CE92313D30A008C9684 /* Main.storyboard in Resources */,
+				992E6FC42313F5E600A1FA9B /* giphy .gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		ED00A49566A5848CCFDB322F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NETShop-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F6188EC5A7A285D7F05F9C59 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NETShop/Pods-NETShop-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NETShop/Pods-NETShop-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NETShop/Pods-NETShop-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		992F8CDC2313D30A008C9684 /* Sources */ = {
@@ -139,8 +264,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				992F8CE62313D30A008C9684 /* ViewController.swift in Sources */,
+				991FD5BA2322805800A57D98 /* ProductListTableViewCell.swift in Sources */,
 				992F8CE42313D30A008C9684 /* AppDelegate.swift in Sources */,
+				991FD5BC2322826900A57D98 /* ProductDetailsViewController.swift in Sources */,
+				992E6FC82313FF4B00A1FA9B /* ForgotPassWordViewController.swift in Sources */,
+				9916D0CB2316806F006D2CB0 /* ProductViewController.swift in Sources */,
+				993034652323D3AE00D4649B /* ProfileViewController.swift in Sources */,
+				9916D0C523167F78006D2CB0 /* HomeViewController.swift in Sources */,
+				992E6FC22313ED3E00A1FA9B /* SingUPViewController.swift in Sources */,
+				9916D0CF2317DC6E006D2CB0 /* SubCategoryListTableViewCell.swift in Sources */,
+				992E6FC62313FECC00A1FA9B /* ChangePassWordViewController.swift in Sources */,
+				99E1DF9723154CE70083EAA4 /* TrtViewController.swift in Sources */,
+				9916D0C723167FE2006D2CB0 /* CategoryViewController.swift in Sources */,
+				9913BC2F2328FEBF00E91A2A /* CartViewController.swift in Sources */,
 				992F8CEC2313D30A008C9684 /* NETShop.xcdatamodeld in Sources */,
+				9916D0C923168018006D2CB0 /* SubCategoryViewController.swift in Sources */,
+				9916D0CD2316A637006D2CB0 /* CategoryListTableViewCell.swift in Sources */,
+				991B3735232A647F0076C16F /* CartListTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,10 +424,12 @@
 		};
 		992F8CF62313D30C008C9684 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA247A34E7D6908585A5CAA8 /* Pods-NETShop.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = NETShop/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -301,10 +443,12 @@
 		};
 		992F8CF72313D30C008C9684 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4570BF7F8BAE6B857A1BB951 /* Pods-NETShop.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = NETShop/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
