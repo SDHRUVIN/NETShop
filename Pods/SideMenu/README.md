@@ -19,6 +19,7 @@
 * **[Installation](#installation)**
   * [CocoaPods](#cocoapods)
   * [Carthage](#carthage)
+  * [Swift Package Manager](#swift-package-manager)
 * **[Usage](#usage)**
   * [Code-less Storyboard Implementation](#code-less-storyboard-implementation)
   * [Code Implementation](#code-implementation)
@@ -35,7 +36,7 @@
 
 SideMenu is a simple and versatile side menu control written in Swift.
 - [x] **It can be implemented in storyboard without a single line of [code](#code-less-storyboard-implementation).**
-- [x] Four standard animation styles to choose from (there's even a parallax effect if you want to get weird).
+- [x] Eight standard animation styles to choose from (there's even a parallax effect if you want to get weird).
 - [x] Highly customizable without needing to write tons of custom code.
 - [x] Supports continuous swiping between side menus on boths sides in a single gesture.
 - [x] Global menu configuration. Set-up once and be done for all screens.
@@ -50,7 +51,7 @@ Check out the example project to see it in action!
 | ![](https://raw.githubusercontent.com/jonkykong/SideMenu/master/etc/SlideOut.gif) | ![](https://raw.githubusercontent.com/jonkykong/SideMenu/master/etc/SlideIn.gif) | ![](https://raw.githubusercontent.com/jonkykong/SideMenu/master/etc/Dissolve.gif) | ![](https://raw.githubusercontent.com/jonkykong/SideMenu/master/etc/InOut.gif) |
 
 ## Requirements
-- [x] Xcode 10.
+- [x] Xcode 11.
 - [x] Swift 5.
 - [x] iOS 10 or higher.
 
@@ -100,6 +101,18 @@ To integrate SideMenu into your Xcode project using Carthage, specify it in your
 
 ```ogdl
 github "jonkykong/SideMenu" "master"
+```
+
+### Swift Package Manager
+
+The [Swift Package Manager](https://swift.org/package-manager/) is a tool for automating the distribution of Swift code and is integrated into the `swift` compiler. It is in early development, but SideMenu does support its use on supported platforms.
+
+Once you have your Swift package set up, adding SideMenu as a dependency is as easy as adding it to the `dependencies` value of your `Package.swift`.
+
+```swift
+dependencies: [
+    .package(url: "https://github.com/jonkykong/SideMenu.git", from: "6.0.0")
+]
 ```
 
 ## Usage

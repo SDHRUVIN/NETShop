@@ -5,22 +5,22 @@
 //  Created by Jon Kent on 7/1/19.
 //
 
-import Foundation
+import UIKit
 
 extension NSObject: InitializableClass {}
 
 internal extension UIView {
 
     @discardableResult func untransformed(_ block: () -> CGFloat) -> CGFloat {
-        let transform = self.transform
-        self.transform = .identity
+        let t = transform
+        transform = .identity
         let value = block()
-        self.transform = transform
+        transform = t
         return value
     }
 
     func bringToFront() {
-        self.superview?.bringSubviewToFront(self)
+        superview?.bringSubviewToFront(self)
     }
 
     func untransform(_ block: () -> Void) {
@@ -29,21 +29,42 @@ internal extension UIView {
             return 0
         }
     }
+
+    static func animationsEnabled(_ block: () -> Void) {
+        let a = areAnimationsEnabled
+        setAnimationsEnabled(true)
+        block()
+        setAnimationsEnabled(a)
+    }
 }
 
 internal extension UIViewController {
 
+    // View controller actively displayed in that layer. It may not be visible if it's presenting another view controller.
     var activeViewController: UIViewController {
         switch self {
         case let navigationController as UINavigationController:
-            return navigationController.visibleViewController?.activeViewController ?? self
+            return navigationController.topViewController?.activeViewController ?? self
         case let tabBarController as UITabBarController:
             return tabBarController.selectedViewController?.activeViewController ?? self
         case let splitViewController as UISplitViewController:
             return splitViewController.viewControllers.last?.activeViewController ?? self
         default:
-            return presentedViewController?.activeViewController ?? self
+            return self
         }
+    }
+
+    // View controller being displayed on screen to the user.
+    var topMostViewController: UIViewController {
+        let activeViewController = self.activeViewController
+        return activeViewController.presentedViewController?.topMostViewController ?? activeViewController
+    }
+
+    var containerViewController: UIViewController {
+        return navigationController?.containerViewController ??
+            tabBarController?.containerViewController ??
+            splitViewController?.containerViewController ??
+            self
     }
 
     @objc var isHidden: Bool {
@@ -63,6 +84,10 @@ internal extension UIGestureRecognizer {
         guard let view = view else { return nil }
         self.init(addTo: view, target: target, action: action)
     }
+
+    func remove() {
+        view?.removeGestureRecognizer(self)
+    }
 }
 
 internal extension UIPanGestureRecognizer {
@@ -81,5 +106,12 @@ internal extension UIPanGestureRecognizer {
         return view?.untransformed {
             return self.velocity(in: view).x
             } ?? 0
+    }
+}
+
+internal extension UIApplication {
+
+    var keyWindow: UIWindow? {
+        return UIApplication.shared.windows.filter { $0.isKeyWindow }.first
     }
 }

@@ -7,6 +7,19 @@
 
 import UIKit
 
+internal protocol PresentationModel {
+    /// Draws `presentStyle.backgroundColor` behind the status bar. Default is 1.
+    var statusBarEndAlpha: CGFloat { get }
+    /// Enable or disable interaction with the presenting view controller while the menu is displayed. Enabling may make it difficult to dismiss the menu or cause exceptions if the user tries to present and already presented menu. `presentingViewControllerUseSnapshot` must also set to false. Default is false.
+    var presentingViewControllerUserInteractionEnabled: Bool { get }
+    /// Use a snapshot for the presenting vierw controller while the menu is displayed. Useful when layout changes occur during transitions. Not recommended for apps that support rotation. Default is false.
+    var presentingViewControllerUseSnapshot: Bool { get }
+    /// The presentation style of the menu.
+    var presentationStyle: SideMenuPresentationStyle { get }
+    /// Width of the menu when presented on screen, showing the existing view controller in the remaining space. Default is zero.
+    var menuWidth: CGFloat { get }
+}
+
 internal protocol SideMenuPresentationControllerDelegate: class {
     func sideMenuPresentationControllerDidTap(_ presentationController: SideMenuPresentationController)
     func sideMenuPresentationController(_ presentationController: SideMenuPresentationController, didPanWith gesture: UIPanGestureRecognizer)
@@ -17,6 +30,7 @@ internal final class SideMenuPresentationController {
     private let config: PresentationModel
     private unowned var containerView: UIView
     private var interactivePopGestureRecognizerEnabled: Bool?
+    private var clipsToBounds: Bool?
     private let leftSide: Bool
     private weak var originalSuperview: UIView?
     private unowned var presentedViewController: UIViewController
@@ -77,7 +91,12 @@ internal final class SideMenuPresentationController {
 
         guard let statusBarView = statusBarView else { return }
         let statusBarOffset = containerView.frame.size.height - presentedViewController.view.bounds.height
-        var statusBarFrame = UIApplication.shared.statusBarFrame
+        var statusBarFrame: CGRect
+        if #available(iOS 13.0, *) {
+            statusBarFrame = containerView.window?.windowScene?.statusBarManager?.statusBarFrame ?? .zero
+        } else {
+            statusBarFrame = UIApplication.shared.statusBarFrame
+        }
 
         // For in-call status bar, height is normally 40, which overlaps view. Instead, calculate height difference
         // of view and set height to fill in remaining space.
@@ -172,9 +191,7 @@ internal final class SideMenuPresentationController {
         statusBarView?.removeFromSuperview()
         presentedViewController.view.removeFromSuperview()
 
-        presentingViewController.view.motionEffects.removeAll()
-        presentingViewController.view.layer.shadowOpacity = 0
-        presentedViewController.view.layer.shadowOpacity = 0
+        removeStyles(from: presentingViewController.containerViewController.view)
         
         if let interactivePopGestureRecognizerEnabled = interactivePopGestureRecognizerEnabled,
             let topNavigationController = presentingViewController as? UINavigationController {
@@ -221,7 +238,9 @@ private extension SideMenuPresentationController {
         view.layer.shadowColor = config.presentationStyle.onTopShadowColor.cgColor
         view.layer.shadowRadius = config.presentationStyle.onTopShadowRadius
         view.layer.shadowOpacity = config.presentationStyle.onTopShadowOpacity
-        view.layer.shadowOffset = CGSize(width: 0, height: 0)
+        view.layer.shadowOffset = config.presentationStyle.onTopShadowOffset
+        clipsToBounds = clipsToBounds ?? view.clipsToBounds
+        view.clipsToBounds = false
     }
 
     func addParallax(to view: UIView) {
@@ -249,5 +268,13 @@ private extension SideMenuPresentationController {
             view.motionEffects.removeAll()
             view.addMotionEffect(group)
         }
+    }
+
+    func removeStyles(from view: UIView) {
+        view.motionEffects.removeAll()
+        view.layer.shadowOpacity = 0
+        view.layer.shadowOpacity = 0
+        view.clipsToBounds = clipsToBounds ?? true
+        clipsToBounds = false
     }
 }

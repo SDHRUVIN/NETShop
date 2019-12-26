@@ -1,33 +1,41 @@
 PODS:
-  - Alamofire (4.8.2)
+  - Alamofire (4.9.0)
   - AlamofireImage (3.5.2):
     - Alamofire (~> 4.8)
-  - SideMenu (6.2.2)
+  - RoundedViews (1.0.2)
+  - SideMenu (6.4.3)
   - SwiftyJSON (5.0.0)
   - Toast-Swift (5.0.0)
+  - Toucan (1.1.0)
 
 DEPENDENCIES:
   - Alamofire
   - AlamofireImage
+  - RoundedViews
   - SideMenu
   - SwiftyJSON
   - Toast-Swift
+  - Toucan
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - AlamofireImage
+    - RoundedViews
     - SideMenu
     - SwiftyJSON
     - Toast-Swift
+    - Toucan
 
 SPEC CHECKSUMS:
-  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  Alamofire: afc3e7c6db61476cb45cdd23fed06bad03bbc321
   AlamofireImage: 63cfe3baf1370be6c498149687cf6db3e3b00999
-  SideMenu: ba47df99f8efc13848b5b67c11a88a770280ab03
+  RoundedViews: c15945e567972d09b8af6edbb36bd877e0ed4e07
+  SideMenu: 6540fa7a055b3728c006cec7d97e3a38cdac4874
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   Toast-Swift: 36f4720243c8582c2be243a60a51e193c761f541
+  Toucan: 8f228fabb21521b9658692df9325fe76e71d74b2
 
-PODFILE CHECKSUM: 7da0be9b7ea78c4fc39a4c7388f4487fdcbe6e5c
+PODFILE CHECKSUM: 68017c38a8e0f71d58f5365dd79cc1e8d80ddc26
 
 COCOAPODS: 1.7.5

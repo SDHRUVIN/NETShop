@@ -15,9 +15,14 @@
 		9916D0CB2316806F006D2CB0 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9916D0CA2316806F006D2CB0 /* ProductViewController.swift */; };
 		9916D0CD2316A637006D2CB0 /* CategoryListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9916D0CC2316A637006D2CB0 /* CategoryListTableViewCell.swift */; };
 		9916D0CF2317DC6E006D2CB0 /* SubCategoryListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9916D0CE2317DC6E006D2CB0 /* SubCategoryListTableViewCell.swift */; };
+		991ADA712348820F002388DA /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991ADA702348820F002388DA /* UIView+Extension.swift */; };
 		991B3735232A647F0076C16F /* CartListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991B3734232A647F0076C16F /* CartListTableViewCell.swift */; };
 		991FD5BA2322805800A57D98 /* ProductListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991FD5B92322805800A57D98 /* ProductListTableViewCell.swift */; };
 		991FD5BC2322826900A57D98 /* ProductDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991FD5BB2322826900A57D98 /* ProductDetailsViewController.swift */; };
+		9926457E234F38010031D4F1 /* 243916_preview.png in Resources */ = {isa = PBXBuildFile; fileRef = 9926457D234F38000031D4F1 /* 243916_preview.png */; };
+		99264580234F3BF30031D4F1 /* skeleton-running-locomotive-mechanical-pocket.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9926457F234F3BF20031D4F1 /* skeleton-running-locomotive-mechanical-pocket.jpg */; };
+		99264582234F3CB60031D4F1 /* PikPng.com_iphone-mobile-png_1631644.png in Resources */ = {isa = PBXBuildFile; fileRef = 99264581234F3CB60031D4F1 /* PikPng.com_iphone-mobile-png_1631644.png */; };
+		99264584234F3CF70031D4F1 /*  .jpg in Resources */ = {isa = PBXBuildFile; fileRef = 99264583234F3CF70031D4F1 /*  .jpg */; };
 		992E6FC22313ED3E00A1FA9B /* SingUPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992E6FC12313ED3E00A1FA9B /* SingUPViewController.swift */; };
 		992E6FC42313F5E600A1FA9B /* giphy .gif in Resources */ = {isa = PBXBuildFile; fileRef = 992E6FC32313F5E600A1FA9B /* giphy .gif */; };
 		992E6FC62313FECC00A1FA9B /* ChangePassWordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992E6FC52313FECC00A1FA9B /* ChangePassWordViewController.swift */; };
@@ -31,6 +36,8 @@
 		993034632323D1FD00D4649B /* lock1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 993034622323D1FD00D4649B /* lock1.jpg */; };
 		993034652323D3AE00D4649B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993034642323D3AE00D4649B /* ProfileViewController.swift */; };
 		993034672323D90400D4649B /* lock2.png in Resources */ = {isa = PBXBuildFile; fileRef = 993034662323D90300D4649B /* lock2.png */; };
+		995F759E23530E5500EC1D43 /* WEB_URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995F759D23530E5500EC1D43 /* WEB_URL.swift */; };
+		995F75A02353112500EC1D43 /* JSONField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995F759F2353112500EC1D43 /* JSONField.swift */; };
 		99E1DF9723154CE70083EAA4 /* TrtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E1DF9623154CE70083EAA4 /* TrtViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -44,9 +51,14 @@
 		9916D0CA2316806F006D2CB0 /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
 		9916D0CC2316A637006D2CB0 /* CategoryListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListTableViewCell.swift; sourceTree = "<group>"; };
 		9916D0CE2317DC6E006D2CB0 /* SubCategoryListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubCategoryListTableViewCell.swift; sourceTree = "<group>"; };
+		991ADA702348820F002388DA /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		991B3734232A647F0076C16F /* CartListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartListTableViewCell.swift; sourceTree = "<group>"; };
 		991FD5B92322805800A57D98 /* ProductListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListTableViewCell.swift; sourceTree = "<group>"; };
 		991FD5BB2322826900A57D98 /* ProductDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewController.swift; sourceTree = "<group>"; };
+		9926457D234F38000031D4F1 /* 243916_preview.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 243916_preview.png; sourceTree = "<group>"; };
+		9926457F234F3BF20031D4F1 /* skeleton-running-locomotive-mechanical-pocket.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "skeleton-running-locomotive-mechanical-pocket.jpg"; sourceTree = "<group>"; };
+		99264581234F3CB60031D4F1 /* PikPng.com_iphone-mobile-png_1631644.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PikPng.com_iphone-mobile-png_1631644.png"; sourceTree = "<group>"; };
+		99264583234F3CF70031D4F1 /*  .jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = " .jpg"; sourceTree = "<group>"; };
 		992E6FC12313ED3E00A1FA9B /* SingUPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingUPViewController.swift; sourceTree = "<group>"; };
 		992E6FC32313F5E600A1FA9B /* giphy .gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "giphy .gif"; sourceTree = "<group>"; };
 		992E6FC52313FECC00A1FA9B /* ChangePassWordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePassWordViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +74,8 @@
 		993034622323D1FD00D4649B /* lock1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lock1.jpg; sourceTree = "<group>"; };
 		993034642323D3AE00D4649B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		993034662323D90300D4649B /* lock2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lock2.png; sourceTree = "<group>"; };
+		995F759D23530E5500EC1D43 /* WEB_URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WEB_URL.swift; sourceTree = "<group>"; };
+		995F759F2353112500EC1D43 /* JSONField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONField.swift; sourceTree = "<group>"; };
 		99E1DF9623154CE70083EAA4 /* TrtViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrtViewController.swift; sourceTree = "<group>"; };
 		AA247A34E7D6908585A5CAA8 /* Pods-NETShop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NETShop.debug.xcconfig"; path = "Target Support Files/Pods-NETShop/Pods-NETShop.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -109,6 +123,8 @@
 			isa = PBXGroup;
 			children = (
 				992F8CE32313D30A008C9684 /* AppDelegate.swift */,
+				995F759D23530E5500EC1D43 /* WEB_URL.swift */,
+				995F759F2353112500EC1D43 /* JSONField.swift */,
 				992F8CE52313D30A008C9684 /* ViewController.swift */,
 				992F8CE72313D30A008C9684 /* Main.storyboard */,
 				99E1DF9623154CE70083EAA4 /* TrtViewController.swift */,
@@ -130,9 +146,14 @@
 				992E6FC32313F5E600A1FA9B /* giphy .gif */,
 				993034622323D1FD00D4649B /* lock1.jpg */,
 				993034662323D90300D4649B /* lock2.png */,
+				9926457D234F38000031D4F1 /* 243916_preview.png */,
+				9926457F234F3BF20031D4F1 /* skeleton-running-locomotive-mechanical-pocket.jpg */,
+				99264581234F3CB60031D4F1 /* PikPng.com_iphone-mobile-png_1631644.png */,
+				99264583234F3CF70031D4F1 /*  .jpg */,
 				992F8CEF2313D30C008C9684 /* LaunchScreen.storyboard */,
 				992F8CF22313D30C008C9684 /* Info.plist */,
 				992F8CEA2313D30A008C9684 /* NETShop.xcdatamodeld */,
+				991ADA702348820F002388DA /* UIView+Extension.swift */,
 			);
 			path = NETShop;
 			sourceTree = "<group>";
@@ -211,6 +232,10 @@
 				993034632323D1FD00D4649B /* lock1.jpg in Resources */,
 				992F8CE92313D30A008C9684 /* Main.storyboard in Resources */,
 				992E6FC42313F5E600A1FA9B /* giphy .gif in Resources */,
+				99264582234F3CB60031D4F1 /* PikPng.com_iphone-mobile-png_1631644.png in Resources */,
+				99264580234F3BF30031D4F1 /* skeleton-running-locomotive-mechanical-pocket.jpg in Resources */,
+				99264584234F3CF70031D4F1 /*  .jpg in Resources */,
+				9926457E234F38010031D4F1 /* 243916_preview.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,12 +294,15 @@
 				991FD5BC2322826900A57D98 /* ProductDetailsViewController.swift in Sources */,
 				992E6FC82313FF4B00A1FA9B /* ForgotPassWordViewController.swift in Sources */,
 				9916D0CB2316806F006D2CB0 /* ProductViewController.swift in Sources */,
+				995F75A02353112500EC1D43 /* JSONField.swift in Sources */,
 				993034652323D3AE00D4649B /* ProfileViewController.swift in Sources */,
 				9916D0C523167F78006D2CB0 /* HomeViewController.swift in Sources */,
 				992E6FC22313ED3E00A1FA9B /* SingUPViewController.swift in Sources */,
 				9916D0CF2317DC6E006D2CB0 /* SubCategoryListTableViewCell.swift in Sources */,
 				992E6FC62313FECC00A1FA9B /* ChangePassWordViewController.swift in Sources */,
 				99E1DF9723154CE70083EAA4 /* TrtViewController.swift in Sources */,
+				995F759E23530E5500EC1D43 /* WEB_URL.swift in Sources */,
+				991ADA712348820F002388DA /* UIView+Extension.swift in Sources */,
 				9916D0C723167FE2006D2CB0 /* CategoryViewController.swift in Sources */,
 				9913BC2F2328FEBF00E91A2A /* CartViewController.swift in Sources */,
 				992F8CEC2313D30A008C9684 /* NETShop.xcdatamodeld in Sources */,

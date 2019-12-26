@@ -21,11 +21,11 @@ class ProductViewController: UIViewController , UITableViewDelegate , UITableVie
     var imageURL = "http://localhost/app/uploadPhoto/"
     
     
-    var arr_product_id = [String]()
-    var arr_product_name = [String]()
-    var arr_product_image = [String]()
-    var arr_product_detail = [String]()
-    var arr_product_price = [String]()
+    //var arr_product_id = [String]()
+    //var arr_product_name = [String]()
+    //var arr_product_image = [String]()
+    //var arr_product_detail = [String]()
+    //var arr_product_price = [String]()
     //var arr_category_id = [String]()
     var sub_categorys_id = ""
     
@@ -34,7 +34,7 @@ class ProductViewController: UIViewController , UITableViewDelegate , UITableVie
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.API_ListProduct()
+        //self.API_ListProduct()
         self.tblProductsList.dataSource = self
         self.tblProductsList.delegate = self
         self.tblProductsList.reloadData()
@@ -44,17 +44,17 @@ class ProductViewController: UIViewController , UITableViewDelegate , UITableVie
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return arr_product_id.count
+        return JSONField.arr_product_id.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tblProductsList.dequeueReusableCell(withIdentifier: "ProductListTableViewCell", for: indexPath) as! ProductListTableViewCell
         //cell.lblProductID.text = arr_product_id[indexPath.row]
         
-        cell.lblProductName.text = arr_product_name[indexPath.row]
+        cell.lblProductName.text = JSONField.arr_product_name[indexPath.row]
         
         
-        if let url = URL(string: arr_product_image[indexPath.row]) {
+        if let url = URL(string: JSONField.arr_product_photo[indexPath.row]) {
             
             DispatchQueue.global().async {
                 let data = try? Data(contentsOf: url)
@@ -78,11 +78,11 @@ class ProductViewController: UIViewController , UITableViewDelegate , UITableVie
         let storyBoard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let ProductDVC = storyBoard.instantiateViewController(withIdentifier: "ProductDetailsViewController") as! ProductDetailsViewController
         
-        ProductDVC.product_id = arr_product_id[indexPath.row]
+        ProductDVC.product_id = sub_categorys_id
         
-        ProductDVC.arr_product_name = arr_product_name[indexPath.row]
-        ProductDVC.arr_product_details = arr_product_detail[indexPath.row]
-        ProductDVC.arr_product_price = arr_product_price[indexPath.row]
+        ProductDVC.arr_product_name = JSONField.arr_product_name[indexPath.row]
+        ProductDVC.arr_product_details = JSONField.arr_product_detail[indexPath.row]
+        ProductDVC.arr_product_price = JSONField.arr_product_price[indexPath.row]
         
         //ProductDVC.arr_product_image = arr_product_image[indexPath.row]
         
@@ -93,6 +93,47 @@ class ProductViewController: UIViewController , UITableViewDelegate , UITableVie
     }
     
     
+    
+    
+    func fetch_product_by_sub_category(){
+        let url = URL(string:WEB_URL.PRODUCTS_URL + sub_categorys_id)
+        do{
+            let allmydata = try Data(contentsOf: url!)
+            let adata = try JSONSerialization.jsonObject(with: allmydata, options:JSONSerialization.ReadingOptions.allowFragments) as! [String:AnyObject]
+            if let arrayJson = adata["product"] as? NSArray
+            {
+                //when you again request for sub catefory the id will be clear for new request
+                JSONField.arr_product_id.removeAll()
+                JSONField.arr_product_name.removeAll()
+                JSONField.arr_product_price.removeAll()
+                JSONField.arr_product_photo.removeAll()
+                
+                for index in 0...(adata["product"]?.count)! - 1{
+                    let object = arrayJson[index]as! [String:AnyObject]
+                    
+                    let p_IdJson = (object["product_id"]as! String)
+                    JSONField.arr_product_id.append(p_IdJson)
+                    
+                    let p_titleJson = (object["product_name"]as! String)
+                    JSONField.arr_product_name.append(p_titleJson)
+                    
+                    let p_priceJson = (object["product_price"]as! String)
+                    JSONField.arr_product_price.append(p_priceJson)
+                    
+                    let p_imageJson = (object["product_image"]as! String)
+                    JSONField.arr_product_photo.append(p_imageJson)
+                }
+            }
+        }
+        catch{print("error:\(error)")
+        }
+    }
+    
+    
+    
+    
+    
+    /*
     func API_ListProduct() {
         
         let url = "http://localhost/app/products-listing.php?sub_category_id=\(sub_categorys_id)"
@@ -152,6 +193,7 @@ class ProductViewController: UIViewController , UITableViewDelegate , UITableVie
         
         
     }
+    */
     
     
     

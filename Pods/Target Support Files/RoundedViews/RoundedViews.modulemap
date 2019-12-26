@@ -1,0 +1,6 @@
+framework module RoundedViews {
+  umbrella header "RoundedViews-umbrella.h"
+
+  export *
+  module * { export * }
+}

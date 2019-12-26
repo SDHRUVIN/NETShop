@@ -22,9 +22,9 @@ class CategoryViewController: UIViewController , UITableViewDelegate , UITableVi
     var imageURL = "http://localhost/app/uploadPhoto/"
     
     
-    var arr_category_id = [String]()
-    var arr_category_name = [String]()
-    var arr_category_photo = [String]()
+    //var arr_category_id = [String]()
+    //var arr_category_name = [String]()
+    //var arr_category_photo = [String]()
     
     
 
@@ -35,30 +35,32 @@ class CategoryViewController: UIViewController , UITableViewDelegate , UITableVi
         self.tblCategoryList.dataSource = self
         
         // Do any additional setup after loading the view.
-        self.API_ListCategory()
-        self.tblCategoryList.reloadData()
+        //self.API_ListCategory()
+        self.fetch_categories_details()
+        //self.tblCategoryList.reloadData()
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         DispatchQueue.main.async {
-            self.API_ListCategory()
-            
+            //self.API_ListCategory()
+            //self.fetch_categories_details()
+            self.delete(self.tblCategoryList)
         }
     }
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return arr_category_id.count
+        return JSONField.arr_category_id.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryListTableViewCell") as! CategoryListTableViewCell
         
-        cell.lblCategoryName!.text = arr_category_name[indexPath.row]
+        cell.lblCategoryName!.text = JSONField.arr_category_name[indexPath.row]
         
-        if let url = URL(string: arr_category_photo[indexPath.row]) {
+        if let url = URL(string: JSONField.arr_category_photo[indexPath.row]) {
             
             DispatchQueue.global().async {
                 let data = try? Data(contentsOf: url)
@@ -112,7 +114,7 @@ class CategoryViewController: UIViewController , UITableViewDelegate , UITableVi
     {
       //  let storyBoard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let SubCatVC = storyboard?.instantiateViewController(withIdentifier: "SubCategoryViewController") as! SubCategoryViewController
-        SubCatVC.categorys_id = arr_category_id[indexPath.row]
+        SubCatVC.categorys_id = JSONField.arr_category_id[indexPath.row]
         self.navigationController?.pushViewController(SubCatVC, animated: true)
         //self.present(dvc1,animated: true,completion: nil)
         //SubCatVC.categorys_id = arr_category_id[indexPath.row]
@@ -122,7 +124,45 @@ class CategoryViewController: UIViewController , UITableViewDelegate , UITableVi
     
     
     
+    func fetch_categories_details()
+    {
+        let url = URL(string:WEB_URL.CATEGORIES_URL)
+        do{
+            let allmydata = try Data(contentsOf: url!)
+            let adata = try JSONSerialization.jsonObject(with: allmydata, options:JSONSerialization.ReadingOptions.allowFragments) as! [String:AnyObject]
+            if let arrayJson = adata["category"] as? NSArray
+            {
+                
+                JSONField.arr_category_id.removeAll()
+                JSONField.arr_category_name.removeAll()
+                JSONField.arr_category_photo.removeAll()
+                
+                
+                for index in 0...(adata["category"]?.count)! - 1
+                {
+                    let object = arrayJson[index]as! [String:AnyObject]
+                    
+                    let catIdJson = (object["category_id"]as! String)
+                    JSONField.arr_category_id.append(catIdJson)
+                    
+                    let catNameJson = (object["category_name"]as! String)
+                    JSONField.arr_category_name.append(catNameJson)
+                    
+                    let catImageJson = (object["category_photo"]as! String)
+                    JSONField.arr_category_photo.append(catImageJson)
+                }
+            }
+        }
+        catch
+        {print("error=\(error)")
+        }
+    }
     
+    
+    
+    
+    
+    /*
     func API_ListCategory() {
         
         let url = "http://localhost/app/category-listing.php"
@@ -173,6 +213,7 @@ class CategoryViewController: UIViewController , UITableViewDelegate , UITableVi
         }
         
     }
+    */
     
     
     

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Toucan
 
 class TrtViewController: UIViewController {
 
@@ -14,6 +15,10 @@ class TrtViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        self.imgtryroundframe.layer.cornerRadius = self.imgtryroundframe.frame.size.width / 2
+        self.imgtryroundframe.clipsToBounds = true
+        
     }
     
     @IBAction func btnaTry(_ sender: Any) {
@@ -27,6 +32,11 @@ class TrtViewController: UIViewController {
         self.navigationController?.pushViewController(trtVC, animated: true)
         
     }
+    
+    // Mark :- it's a try
+    @IBOutlet weak var imgtryroundframe: UIImageView!
+    
+    //let resizedAndMaskedImage = Toucan(image: myImage).resize(CGSize(width: 100, height: 150)).maskWithEllipse().image
     
     
     /*

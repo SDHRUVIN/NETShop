@@ -13,6 +13,8 @@ pod 'AlamofireImage'
 pod 'SwiftyJSON'
 pod 'SideMenu'
 pod 'Toast-Swift'
+pod 'Toucan'
+pod 'RoundedViews'
 
 
 
